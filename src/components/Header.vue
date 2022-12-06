@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav class="container">
-            <a href="/"><img alt="WDEV" id="logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg"></a>
+            <router-link to="/"><img alt="WDEV" id="logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg"></router-link>
 
             <img v-on:click="openMenu" alt="Abrir menu" id="menu-button" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg">
 
@@ -11,10 +11,10 @@
                 <img alt="WDEV" id="menu-logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg">
                 
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/videos">Vídeos</a></li>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/contato">Contato</a></li>
+                    <li @click="closeMenu"><router-link to="/">Home</router-link></li>
+                    <li @click="closeMenu"><router-link to="/videos">Vídeos</router-link></li>
+                    <li @click="closeMenu"><router-link to="/sobre">Sobre</router-link></li>
+                    <li @click="closeMenu"><router-link to="/contato">Contato</router-link></li>
                 </ul>
             </div>
         </nav>
